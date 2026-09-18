@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="grid h-[68px] min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-2 sm:gap-6">
           <div className="flex items-center justify-start gap-2 text-[#1f1b17] max-[320px]:gap-1 sm:gap-3">
             <img
-              src="/mertyapi-logo.jpg"
+              src="/logo.png"
               alt="MERTYAPI logo"
               className="h-7 w-7 rounded-[2px] object-cover max-[320px]:h-6 max-[320px]:w-6"
             />
