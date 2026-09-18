@@ -21,7 +21,7 @@ export const Header: React.FC<HeaderProps> = ({
             <img
               src="/logo.png"
               alt="MERTYAPI logo"
-              className="h-7 w-7 rounded-[2px] object-cover max-[320px]:h-6 max-[320px]:w-6"
+              className="h-9 w-auto max-w-[170px] object-contain max-[320px]:h-7 max-[320px]:max-w-[120px]"
             />
 
             <a
