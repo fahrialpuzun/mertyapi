@@ -18,11 +18,13 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="mx-auto max-w-[1400px] px-3 sm:px-6 lg:px-8">
         <div className="grid h-[68px] min-w-0 grid-cols-[auto_minmax(0,1fr)] items-center gap-2 sm:gap-6">
           <div className="flex items-center justify-start gap-2 text-[#1f1b17] max-[320px]:gap-1 sm:gap-3">
-            <img
-              src="/logo.png"
-              alt="MERTYAPI logo"
-              className="h-9 w-auto max-w-[170px] object-contain max-[320px]:h-7 max-[320px]:max-w-[120px]"
-            />
+            <div className="flex h-7 w-7 items-center justify-center rounded-[2px] border border-[#1f1b17]/80 bg-transparent max-[320px]:h-6 max-[320px]:w-6">
+              <img
+                src="/logo.png"
+                alt="MERTYAPI logo"
+                className="h-full w-full rounded-[2px] object-contain p-[2px]"
+              />
+            </div>
 
             <a
               href="#"
