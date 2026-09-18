@@ -1,6 +1,8 @@
 gardolap-001:Jaluzi Kapaklı Gardırop
 gardolap-002:Jaluzi Kapaklı Ceviz Gardırop
 gardolap-003:Ahşap Şifonyer Dolap
+gardolap-005:Modern Sürgülü Gardırop
+gardolap-007:Antrasit Modern Gardırop
 fortmanto-004:Beyaz Çekmeceli Gardırop
 fortmanto-005:Modern Kapak Gardırop
 fortmanto-006:Klasik Kapaklı Gardırop
