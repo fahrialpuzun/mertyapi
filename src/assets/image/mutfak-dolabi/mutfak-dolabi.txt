@@ -1,5 +1,5 @@
 mutfak-dolabi-004:Kumtaşı Modern Mutfak
-mutfak-dolabi-011:Beyaz Mermer Dokulu Mutfak
+mutfak-dolabi-01:Beyaz Mermer Dokulu Mutfak
 mutfak-dolabi-013:Beyaz & Siyah Modern Mutfak
 mutfak-dolabi-014:Country Beyaz Mutfak
 mutfak-dolabi-015:Klasik Kahve Köşesi

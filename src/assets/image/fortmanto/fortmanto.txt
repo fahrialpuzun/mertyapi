@@ -1,1 +1,5 @@
-fortmanto-002:portmanto
+fortmanto-001:Siyah Portmanto
+fortmanto-002:Beyaz Ayna Detaylı Portmanto
+fortmanto-003:Masif Portmanto
+fortmanto-008:Modern Görünüm Portmanto 
+fortmanto-010:Açık Masif Portmanto

@@ -1,1 +1,16 @@
-ahsap-masa-001:Fako
+ahsap-masa-001:Rustik Yemek Masası
+ahsap-masa-002:Yuvarlak Klasik Ahşap Masa
+ahsap-masa-004:Masif Dikdörtgen Ahşap Masa
+ahsap-masa-005:Dış Mekân Ahşap Yemek Masası
+ahsap-masa-006:Alt Raflı Ahşap Çalışma Masası
+ahsap-masa-007:Klasik Uzun Ahşap Yemek Masası
+ahsap-masa-008:Torna Ayaklı Ahşap Masa
+ahsap-masa-009:Koyu Ceviz Ahşap Masa
+ahsap-masa-010:Doğal Kenar Masif Masa
+ahsap-masa-011:Bahçe Tipi Uzun Ahşap Masa
+ahsap-masa-012:Modern Uzun Ahşap Masa
+ahsap-masa-013:Minimal Dış Mekân Masası
+ahsap-masa-014:Açık Meşe Uzun Masa
+ahsap-masa-015:Metal Ayaklı Modern Masa
+ahsap-masa-016:Sade Ahşap Yemek Masası
+ahsap-masa-017:Kare Orta Sehpa Tipi Masa
