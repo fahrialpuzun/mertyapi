@@ -5,6 +5,7 @@ fortmanto-004:Beyaz Çekmeceli Gardırop
 fortmanto-005:Modern Kapak Gardırop
 fortmanto-006:Klasik Kapaklı Gardırop
 fortmanto-007:Antrasit Açık Gardırop
+gardolap-006:Beyaz Modern Gardırop
 gardolap-018:Yatak Üstü Köprü Gardırop
 gardolap-019:Beyaz Köprü Gardırop
 gardolap-020:Aynalı Beyaz Gardırop
