@@ -34,13 +34,13 @@ export const categories: Category[] = [
   },
   {
     id: 'fortmanto',
-    name: 'Fortmanto',
+    name: 'Portmanto',
     slug: 'fortmanto',
     image: getCategoryImages('fortmanto')[0]?.url ?? '',
   },
   {
     id: 'gardolap',
-    name: 'Gardolap',
+    name: 'Gardrop',
     slug: 'gardolap',
     image: getCategoryImages('gardolap')[0]?.url ?? '',
   },

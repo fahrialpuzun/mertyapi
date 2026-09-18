@@ -15,8 +15,8 @@ const categoryNames: Record<string, string> = {
   'ahsap-merdiven': 'Ahşap Merdiven',
   'ahsap-masa': 'Ahşap Masa',
   kamelya: 'Kamelya',
-  fortmanto: 'Fortmanto',
-  gardolap: 'Gardolap',
+  fortmanto: 'Portmanto',
+  gardolap: 'Gardrop',
   'banyo-dolabi': 'Banyo Dolabı',
   kapi: 'Kapı',
 };
