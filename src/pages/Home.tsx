@@ -6,31 +6,67 @@ import { ProductGrid } from '../components/ProductGrid';
 import { categories } from '../data/categories';
 import { productsByCategory } from '../data/products';
 
+const seoPaths: Record<string, string> = {
+  'mutfak-dolabi': '/mutfak-dolabi/',
+  'gardolap': '/gardirop/',
+  'banyo-dolabi': '/banyo-dolabi/',
+};
+
+const seoContents: Record<string, { heading: string; summary: string }> = {
+  'mutfak-dolabi': {
+    heading: 'Yalova Mutfak Dolabı Modelleri',
+    summary: 'Mutfak dolabı örneklerimizi inceleyin. İstediğiniz model ve yaklaşık ölçülerinizi göndererek fiyat teklifi isteyebilirsiniz.',
+  },
+  gardolap: {
+    heading: 'Yalova Özel Ölçü Gardırop Modelleri',
+    summary: 'Kapaklı, sürgülü ve farklı iç düzenlerdeki gardırop modellerini inceleyin. Odanızın ölçülerini paylaşarak teklif isteyebilirsiniz.',
+  },
+  'banyo-dolabi': {
+    heading: 'Yalova Banyo Dolabı Modelleri',
+    summary: 'Farklı renk ve ölçülerdeki banyo dolabı modellerimize göz atın. İhtiyacınız ve ölçüleriniz için bizimle iletişime geçebilirsiniz.',
+  },
+};
+
+const categoryFromLocation = (): string | null => {
+  const pathname = window.location.pathname.replace(/\/+$/, '') || '/';
+  const fromPath = Object.entries(seoPaths).find(([, value]) => value.replace(/\/+$/, '') === pathname)?.[0];
+  return fromPath ?? (window.location.hash.slice(1) || null);
+};
+
 interface HomeProps {
   searchQuery: string;
 }
 
 export const Home: React.FC<HomeProps> = ({ searchQuery }) => {
-  const [currentCategory, setCurrentCategory] = useState<string | null>(null);
+  const [currentCategory, setCurrentCategory] = useState<string | null>(categoryFromLocation);
 
   // Hash tabanlı routing
   useEffect(() => {
     const handleHashChange = () => {
-      const hash = window.location.hash.slice(1);
-      setCurrentCategory(hash || null);
+      setCurrentCategory(categoryFromLocation());
     };
 
     window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleHashChange);
     handleHashChange();
 
     return () => window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('popstate', handleHashChange);
   }, []);
 
   const handleCategoryClick = (slug: string) => {
+    if (seoPaths[slug]) {
+      window.location.assign(seoPaths[slug]);
+      return;
+    }
     window.location.hash = slug;
   };
 
   const handleBackHome = () => {
+    if (Object.values(seoPaths).some((path) => path.replace(/\/+$/, '') === window.location.pathname.replace(/\/+$/, ''))) {
+      window.location.assign('/');
+      return;
+    }
     window.location.hash = '';
   };
 
@@ -41,6 +77,8 @@ export const Home: React.FC<HomeProps> = ({ searchQuery }) => {
   const currentCategoryData = currentCategory
     ? categories.find((cat) => cat.slug === currentCategory)
     : null;
+
+  const currentSeo = currentCategory && seoPaths[currentCategory] ? seoContents[currentCategory] : null;
 
   const currentProducts = currentCategory
     ? productsByCategory[currentCategory]
@@ -108,11 +146,20 @@ export const Home: React.FC<HomeProps> = ({ searchQuery }) => {
               <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
               Tüm Kategoriler
             </button>
-            <h2 className="max-w-[48%] text-right text-sm font-bold uppercase leading-tight tracking-[0.16em] text-ink sm:max-w-none sm:text-lg sm:tracking-widest">
-              {currentCategoryData.name}
-            </h2>
+            {currentSeo ? (
+              <h1 className="max-w-[60%] text-right text-sm font-bold uppercase leading-tight tracking-[0.12em] text-ink sm:max-w-none sm:text-lg sm:tracking-widest">
+                {currentSeo.heading}
+              </h1>
+            ) : (
+              <h2 className="max-w-[48%] text-right text-sm font-bold uppercase leading-tight tracking-[0.16em] text-ink sm:max-w-none sm:text-lg sm:tracking-widest">
+                {currentCategoryData.name}
+              </h2>
+            )}
           </div>
 
+          {currentSeo && (
+            <p className="mb-6 max-w-3xl text-sm leading-7 text-muted">{currentSeo.summary}</p>
+          )}
           <div className="mb-6 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-line bg-[#f9f6f1] px-5 py-4">
             <p className="text-sm text-ink">Bu tarz bir iş mi yaptırmak istiyorsunuz? Ölçülerinizi gönderin.</p>
             <a href={`/teklif/?urun=${encodeURIComponent(currentCategory)}`} className="rounded bg-[#211c16] px-4 py-2 text-xs font-semibold uppercase tracking-widest text-white no-underline hover:bg-[#514032]">Teklif iste →</a>

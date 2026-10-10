@@ -2,4 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mertyapi.vercel.app/</loc></url>
   <url><loc>https://mertyapi.vercel.app/teklif/</loc></url>
+  <url><loc>https://mertyapi.vercel.app/mutfak-dolabi/</loc></url>
+  <url><loc>https://mertyapi.vercel.app/gardirop/</loc></url>
+  <url><loc>https://mertyapi.vercel.app/banyo-dolabi/</loc></url>
 </urlset>
