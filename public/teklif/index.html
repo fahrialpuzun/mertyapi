@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4f0e5" />
+  <title>Mobilya Teklifi Al | Yalova Mutfak & Gardırop - MertYapı</title>
+  <meta name="description" content="Yalova'da mutfak dolabı, gardırop, banyo dolabı, ahşap masa ve özel mobilya için teklif isteyin. Ölçülerinizi yazın, MertYapı ile WhatsApp'tan görüşün." />
+  <link rel="canonical" href="https://mertyapi.vercel.app/teklif/" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Yalova Mobilya Teklif Talebi | MertYapı" />
+  <meta property="og:description" content="Mutfak, gardırop, banyo dolabı, ahşap masa ve diğer özel ölçü mobilyalarınız için bize ulaşın." />
+  <meta property="og:url" content="https://mertyapi.vercel.app/teklif/" />
+  <style>
+    :root{font-family:Arial,Helvetica,sans-serif;color:#211c16;background:#f4f0e5;font-synthesis:none}
+    *{box-sizing:border-box}
+    body{margin:0;line-height:1.6}
+    a{color:inherit}
+    header{background:#f2eee6;border-bottom:1px solid #d9d0c2;padding:14px max(20px,calc((100vw - 1100px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{text-decoration:none;font-family:Georgia,serif;font-size:clamp(20px,3vw,27px);letter-spacing:.03em}
+    .back{font-size:13px;text-decoration:none;font-weight:600}
+    main{max-width:1040px;margin:auto;padding:clamp(30px,6vw,65px) 18px 90px}
+    .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8d663b;font-weight:700}
+    h1{font:normal clamp(34px,5vw,53px)/1.13 Georgia,serif;max-width:760px;margin:14px 0 16px}
+    .lead{font-size:17px;color:#675d50;max-width:750px;margin:0 0 30px}
+    .box{max-width:800px;padding:clamp(20px,4vw,40px);background:#fcfaf7;border:1px solid #ded4c5;border-radius:14px;box-shadow:0 9px 25px #34281c0a}
+    h2{font:normal 27px Georgia,serif;margin:0 0 8px}
+    .hint{font-size:14px;color:#665d53;margin:0 0 26px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:21px}
+    .field{display:flex;flex-direction:column;gap:7px}
+    .wide{grid-column:1/-1}
+    label{font-size:14px;font-weight:700}
+    .optional{font-weight:400;color:#756d60}
+    input,select,textarea{width:100%;font:inherit;padding:12px 13px;color:#211c16;background:#fff;border:1px solid #beb3a4;border-radius:8px}
+    textarea{min-height:100px;resize:vertical}
+    input:focus,select:focus,textarea:focus{outline:2px solid #9b774d;outline-offset:2px}
+    .privacy{border-left:3px solid #a17a48;padding:10px 14px;margin:26px 0 19px;background:#f5f0e8;font-size:13px;color:#564b3d}
+    button{padding:15px 21px;border:0;border-radius:8px;background:#211c16;color:#fff7eb;font:700 15px Arial, sans-serif;cursor:pointer;min-height:48px}
+    button:hover{background:#4a3b2d}
+    .footnote{font-size:12px;color:#756d60;margin:13px 0 0}
+    .tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px;color:#655a4c;font-size:13px}
+    .tags span{border:1px solid #d8cbbc;border-radius:999px;padding:5px 12px}
+    @media(max-width:600px){.grid{grid-template-columns:1fr} .wide{grid-column:auto} .back{font-size:12px}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"MertYapı Mobilya Teklif Talebi","url":"https://mertyapi.vercel.app/teklif/","isPartOf":{"@type":"WebSite","name":"MertYapı","url":"https://mertyapi.vercel.app/"}}
+  </script>
+</head>
+<body>
+  <header><a class="brand" href="/">MERTYAPI</a><a class="back" href="/">← Projelere dön</a></header>
+  <main>
+    <div class="eyebrow">Yalova • Özel Ölçü Mobilya</div>
+    <h1>Nasıl bir mobilya yaptırmak istiyorsunuz?</h1>
+    <p class="lead">İstediğiniz işi ve yaklaşık ölçüleri yazın. Bilgilerinizle WhatsApp'ta hazır bir mesaj açalım; göndermeden önce siz kontrol edin.</p>
+    <section class="box" aria-labelledby="form-title">
+      <h2 id="form-title">Teklif isteyin</h2>
+      <p class="hint">Kesin ölçü şart değil. Fiyat ve teslim süresi, işin ayrıntıları görüşüldükten sonra netleşir.</p>
+      <form id="quote-form">
+        <div class="grid">
+          <div class="field">
+            <label for="service">Yaptırmak istediğiniz iş *</label>
+            <select id="service" name="service" required>
+              <option value="">Bir ürün seçin</option>
+              <option>Mutfak dolabı</option>
+              <option>Gardırop</option>
+              <option>Banyo dolabı</option>
+              <option>Ahşap masa</option>
+              <option>Kapı</option>
+              <option>Portmanto</option>
+              <option>Ahşap merdiven</option>
+              <option>Kamelya / çardak</option>
+              <option>Kafe / işletme mobilyası</option>
+              <option>Diğer özel mobilya</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="district">İş nerede yapılacak? *</label>
+            <select id="district" name="district" required>
+              <option value="">İlçe seçin</option>
+              <option>Yalova Merkez</option>
+              <option>Çiftlikköy</option>
+              <option>Çınarcık</option>
+              <option>Termal</option>
+              <option>Altınova</option>
+              <option>Armutlu</option>
+              <option>Yakın çevre / diğer</option>
+            </select>
+          </div>
+          <div class="field wide">
+            <label for="size">Yaklaşık ölçüler <span class="optional">(biliyorsanız)</span></label>
+            <input id="size" name="size" maxlength="160" placeholder="Örnek: 3,5 metre mutfak veya 240×260 cm gardırop" />
+          </div>
+          <div class="field wide">
+            <label for="details">İstediğiniz model veya diğer bilgiler <span class="optional">(isteğe bağlı)</span></label>
+            <textarea id="details" name="details" maxlength="1000" placeholder="Kapak tipi, renk, malzeme, ihtiyaçlarınız..."></textarea>
+          </div>
+        </div>
+        <div class="privacy">Bu form sitede hiçbir kişisel veri kaydetmez. Butona bastığınızda yazdığınız bilgilerle WhatsApp açılır; mesaj, siz WhatsApp'ta gönderdiğinizde MertYapı'ya iletilir. Fotoğrafı görüşmeye ayrıca ekleyebilirsiniz.</div>
+        <button type="submit">WhatsApp'ta teklif mesajını aç →</button>
+        <p class="footnote">WhatsApp kullanmıyorsanız <a href="https://www.instagram.com/mertyapi.yalova/" target="_blank" rel="noopener noreferrer">Instagram üzerinden mesaj gönderebilirsiniz.</a></p>
+      </form>
+    </section>
+    <div class="tags"><span>Mutfak dolabı</span><span>Gardırop</span><span>Banyo dolabı</span><span>Ahşap masa</span><span>Özel üretim</span></div>
+  </main>
+  <script>
+    (function () {
+      var service = document.getElementById('service');
+      var suggestions = {
+        'mutfak-dolabi':'Mutfak dolabı',
+        'gardolap':'Gardırop',
+        'banyo-dolabi':'Banyo dolabı',
+        'ahsap-masa':'Ahşap masa',
+        'ahsap-merdiven':'Ahşap merdiven',
+        'kamelya':'Kamelya / çardak',
+        'kapi':'Kapı',
+        'fortmanto':'Portmanto'
+      };
+      var value = new URLSearchParams(window.location.search).get('urun');
+      if (value && Object.prototype.hasOwnProperty.call(suggestions,value)) service.value = suggestions[value];
+      document.getElementById('quote-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        var form = event.currentTarget;
+        if (!form.reportValidity()) return;
+        var product = service.value;
+        var district = document.getElementById('district').value;
+        var size = document.getElementById('size').value.trim();
+        var details = document.getElementById('details').value.trim();
+        var lines = ['Merhaba MertYapı, web sitenizden teklif almak istiyorum.',
+          '', 'İş: '+product, 'Bölge: '+district];
+        if (size) lines.push('Yaklaşık ölçü: '+size);
+        if (details) lines.push('Not: '+details);
+        lines.push('', 'Müsait olduğunuzda görüşebilir miyiz?');
+        var url = 'https://wa.me/905365972833?text=' + encodeURIComponent(lines.join('\n'));
+        window.open(url, '_blank', 'noopener,noreferrer');
+      });
+    })();
+  </script>
+  <noscript><p style="padding:20px;text-align:center">Form için JavaScript gereklidir. <a href="https://wa.me/905365972833">WhatsApp üzerinden ulaşabilirsiniz.</a></p></noscript>
+</body>
+</html>

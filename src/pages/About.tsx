@@ -94,6 +94,9 @@ export const About: React.FC<AboutProps> = ({ onBack }) => {
           </p>
         </div>
       </div>
+      <div className="mb-10 border-t border-line pt-8">
+        <a href="/teklif/" className="inline-flex rounded bg-[#211c16] px-5 py-3 text-sm font-semibold text-white no-underline hover:bg-[#514032]">Projeniz için teklif iste →</a>
+      </div>
     </section>
   );
 };

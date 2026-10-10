@@ -27,7 +27,7 @@ export const Header: React.FC<HeaderProps> = ({
             </div>
 
             <a
-              href="#"
+              href="/"
               onClick={() => {
                 onSearchChange?.('');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -43,8 +43,8 @@ export const Header: React.FC<HeaderProps> = ({
 
           <div className="flex min-w-0 items-center justify-end gap-2 text-[9px] font-medium uppercase tracking-[0.08em] text-[#1f1b17] sm:gap-5 sm:text-[11px] sm:tracking-[0.12em]">
             <a
-              href="#hakkimizda"
-              className="no-underline text-[#1f1b17] transition-opacity hover:opacity-70"
+              href="/#hakkimizda"
+              className="hidden no-underline text-[#1f1b17] transition-opacity hover:opacity-70 sm:block"
             >
               HAKKIMIZDA
             </a>
@@ -57,7 +57,14 @@ export const Header: React.FC<HeaderProps> = ({
               İLETİŞİM
             </a>
 
-            <div className="flex shrink-0 items-center gap-1 rounded-full border border-[#2a241d] bg-[#efe6d7] px-1.5 py-1.5 shadow-[inset_0_0_0_1px_rgba(31,27,23,0.06)] sm:gap-2 sm:px-2">
+            <a
+              href="/teklif/"
+              className="shrink-0 whitespace-nowrap rounded bg-[#211c16] px-2 py-2 text-[9px] font-semibold text-[#fff7e9] no-underline transition-colors hover:bg-[#514032] sm:px-3 sm:text-[11px]"
+            >
+              TEKLİF AL
+            </a>
+
+            <div className="hidden shrink-0 items-center gap-1 rounded-full sm:flex border border-[#2a241d] bg-[#efe6d7] px-1.5 py-1.5 shadow-[inset_0_0_0_1px_rgba(31,27,23,0.06)] sm:gap-2 sm:px-2">
               <span aria-hidden="true" className="text-[#1f1b17]">⌕</span>
               <input
                 type="text"
