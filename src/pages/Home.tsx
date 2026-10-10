@@ -69,7 +69,7 @@ export const Home: React.FC<HomeProps> = ({ searchQuery }) => {
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold">Yalova • Marangozluk ve mobilya üretimi</p>
               <h1 className="max-w-[850px] font-[Georgia,serif] text-3xl leading-tight text-ink sm:text-4xl">Evinize ve iş yerinize özel ölçü mobilya</h1>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-muted sm:text-base">Mutfak dolabı, gardırop, banyo dolabı, ahşap masa ve diğer mobilya işlerimizden örnekleri inceleyin. İstediğiniz işi ve ölçüyü gönderin, birlikte değerlendirelim.</p>
-              <a href="/teklif/" className="mt-5 inline-flex rounded bg-[#211c16] px-5 py-3 text-xs font-semibold uppercase tracking-widest text-white no-underline transition-colors hover:bg-[#514032]">Projem için teklif iste →</a>
+              <a href="/teklif/" className="mt-5 inline-flex rounded bg-[#211c16] px-5 py-3 text-xs font-semibold uppercase tracking-widest text-white no-underline transition-colors hover:bg-[#514032]">FİYAT TEKLİFİ AL →</a>
             </div>
           )}
           {filteredCategories.length > 0 && (
