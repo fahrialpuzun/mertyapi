@@ -14,16 +14,16 @@ const seoPaths: Record<string, string> = {
 
 const seoContents: Record<string, { heading: string; summary: string }> = {
   'mutfak-dolabi': {
-    heading: 'Yalova Mutfak Dolabı Modelleri',
-    summary: 'Mutfak dolabı örneklerimizi inceleyin. İstediğiniz model ve yaklaşık ölçülerinizi göndererek fiyat teklifi isteyebilirsiniz.',
+    heading: 'Mutfak Dolabı Modellerimiz',
+    summary: "Yalova'da özel ölçü mutfak dolabı üretimi ve montajı yapıyoruz. Modellerimizi inceleyebilir, mutfağınız için fiyat teklifi alabilirsiniz.",
   },
   gardolap: {
-    heading: 'Yalova Özel Ölçü Gardırop Modelleri',
-    summary: 'Kapaklı, sürgülü ve farklı iç düzenlerdeki gardırop modellerini inceleyin. Odanızın ölçülerini paylaşarak teklif isteyebilirsiniz.',
+    heading: 'Gardırop Modellerimiz',
+    summary: "Yalova'da özel ölçü gardırop üretimi yapıyoruz. Modellerimizi inceleyebilir, odanızın ölçülerine göre fiyat teklifi alabilirsiniz.",
   },
   'banyo-dolabi': {
-    heading: 'Yalova Banyo Dolabı Modelleri',
-    summary: 'Farklı renk ve ölçülerdeki banyo dolabı modellerimize göz atın. İhtiyacınız ve ölçüleriniz için bizimle iletişime geçebilirsiniz.',
+    heading: 'Banyo Dolabı Modellerimiz',
+    summary: "Yalova'da özel ölçü banyo dolabı üretimi yapıyoruz. Modellerimizi inceleyebilir, banyonuz için fiyat teklifi alabilirsiniz.",
   },
 };
 
@@ -147,7 +147,7 @@ export const Home: React.FC<HomeProps> = ({ searchQuery }) => {
               Tüm Kategoriler
             </button>
             {currentSeo ? (
-              <h1 className="max-w-[60%] text-right text-sm font-bold uppercase leading-tight tracking-[0.12em] text-ink sm:max-w-none sm:text-lg sm:tracking-widest">
+              <h1 className="max-w-[60%] text-right font-[Georgia,serif] text-xl font-normal leading-tight text-ink sm:max-w-none sm:text-2xl">
                 {currentSeo.heading}
               </h1>
             ) : (
