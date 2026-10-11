@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import './App.css';
@@ -15,6 +16,7 @@ function App() {
       onSearchChange={setSearchQuery}
     >
       <Home searchQuery={searchQuery} />
+      <Analytics />
     </Layout>
   );
 }
