@@ -4,7 +4,7 @@ import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import './App.css';
 
-function App() {
+function App({ initialPath }: { initialPath?: string }) {
   const [language, setLanguage] = useState<'TR' | 'EN'>('TR');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -15,7 +15,7 @@ function App() {
       searchQuery={searchQuery}
       onSearchChange={setSearchQuery}
     >
-      <Home searchQuery={searchQuery} />
+      <Home searchQuery={searchQuery} initialPath={initialPath} />
       <Analytics />
     </Layout>
   );

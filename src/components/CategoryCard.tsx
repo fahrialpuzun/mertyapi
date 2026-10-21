@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
+import { seoPaths } from '../data/routes';
 
 interface CategoryProps {
   category: {
@@ -13,10 +14,15 @@ interface CategoryProps {
 
 export const CategoryCard: React.FC<CategoryProps> = ({ category, onClick }) => {
   return (
-    <button
-      onClick={() => onClick(category.slug)}
-      className="category-card group overflow-hidden border border-[#d9d0c2] bg-[#f5f0e7] text-left transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b58a5b]"
-      type="button"
+    <a
+      href={seoPaths[category.slug] ?? `/#${category.slug}`}
+      onClick={(event) => {
+        if (!seoPaths[category.slug] && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) {
+          event.preventDefault();
+          onClick(category.slug);
+        }
+      }}
+      className="category-card group overflow-hidden border border-[#d9d0c2] bg-[#f5f0e7] text-left text-inherit no-underline transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b58a5b]"
     >
       <div className="category-card__media overflow-hidden bg-[#ddd1bf]">
         <img
@@ -34,6 +40,6 @@ export const CategoryCard: React.FC<CategoryProps> = ({ category, onClick }) => 
           <ArrowUpRight className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
         </span>
       </div>
-    </button>
+    </a>
   );
 };

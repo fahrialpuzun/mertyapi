@@ -6,11 +6,7 @@ import { ProductGrid } from '../components/ProductGrid';
 import { categories } from '../data/categories';
 import { productsByCategory } from '../data/products';
 
-const seoPaths: Record<string, string> = {
-  'mutfak-dolabi': '/mutfak-dolabi/',
-  'gardolap': '/gardirop/',
-  'banyo-dolabi': '/banyo-dolabi/',
-};
+import { seoPaths } from '../data/routes';
 
 const seoContents: Record<string, { heading: string; summary: string }> = {
   'mutfak-dolabi': {
@@ -27,18 +23,19 @@ const seoContents: Record<string, { heading: string; summary: string }> = {
   },
 };
 
-const categoryFromLocation = (): string | null => {
-  const pathname = window.location.pathname.replace(/\/+$/, '') || '/';
+const categoryFromLocation = (initialPath?: string): string | null => {
+  const pathname = (initialPath ?? window.location.pathname).replace(/\/+$/, '') || '/';
   const fromPath = Object.entries(seoPaths).find(([, value]) => value.replace(/\/+$/, '') === pathname)?.[0];
-  return fromPath ?? (window.location.hash.slice(1) || null);
+  return fromPath ?? (initialPath === undefined ? window.location.hash.slice(1) || null : null);
 };
 
 interface HomeProps {
   searchQuery: string;
+  initialPath?: string;
 }
 
-export const Home: React.FC<HomeProps> = ({ searchQuery }) => {
-  const [currentCategory, setCurrentCategory] = useState<string | null>(categoryFromLocation);
+export const Home: React.FC<HomeProps> = ({ searchQuery, initialPath }) => {
+  const [currentCategory, setCurrentCategory] = useState<string | null>(() => categoryFromLocation(initialPath));
 
   // Hash tabanlı routing
   useEffect(() => {
@@ -50,8 +47,10 @@ export const Home: React.FC<HomeProps> = ({ searchQuery }) => {
     window.addEventListener('popstate', handleHashChange);
     handleHashChange();
 
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
       window.removeEventListener('popstate', handleHashChange);
+    };
   }, []);
 
   const handleCategoryClick = (slug: string) => {
